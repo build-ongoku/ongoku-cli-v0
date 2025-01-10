@@ -136,7 +136,7 @@ func RunDockerImage(ctx context.Context, cfg ogconfig.Config, args *DockerImageA
 	log.Info(ctx, "DockerImage Step [1/	] Building & pushing deploy image...")
 	err = cmdutil.DockerImageBuild(ctx,
 		cmdutil.DockerBuildReq{
-			DockerfilePath:  filepath.Join(cfg.AppRootPath.Full, ".goku", "static", "dockerfiles", "goku.base.local-build.Dockerfile"),
+			DockerfilePath:  filepath.Join(cfg.AppRootPath.Full, "infra", ".goku", "static", "app.Dockerfile"),
 			DockerImageRepo: args.ImageRepo,
 			DockerImageTag:  args.ImageTag,
 			NoPush:          args.NoPush,
@@ -147,7 +147,7 @@ func RunDockerImage(ctx context.Context, cfg ogconfig.Config, args *DockerImageA
 		},
 	)
 	if err != nil {
-		return errutil.Wrap(err, "Building docker image [%s] using file [%s]", args.ImageTag, "goku.base.local-build.Dockerfile")
+		return errutil.Wrap(err, "Building docker image [%s] using file [%s]", args.ImageTag, "app.Dockerfile")
 	}
 
 	return nil

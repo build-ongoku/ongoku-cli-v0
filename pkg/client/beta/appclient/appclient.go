@@ -1,5 +1,5 @@
 // Package client provides client for the Ongoku API.
-package client
+package appclient
 
 import (
 	"bytes"
