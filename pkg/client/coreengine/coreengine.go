@@ -20,21 +20,13 @@ func init() {
 	if homeDir == "" {
 		panics.P("Cannot initialize default license file path. Env variable HOME is empty")
 	}
-	_defaultLicenseFilePath = filepath.Join(homeDir, ".ongoku", "license")
+	_defaultLicenseFilePath = filepath.Join(homeDir, ".ongoku", "license.txt")
 }
 
 type Client struct {
 	license         string
 	licenseFilePath string
 }
-
-// func getLicenseDefault(ctx context.Context) ([]byte, error) {
-// 	licenseData, err := os.ReadFile(_defaultLicenseFilePath)
-// 	if err != nil {
-// 		return nil, errutil.Wrap(err, "Reading default license file")
-// 	}
-// 	return licenseData, nil
-// }
 
 func NewClientFromDefaultLicenseFile(ctx context.Context) (Client, error) {
 	return NewClientFromLicenseFile(ctx, _defaultLicenseFilePath)
