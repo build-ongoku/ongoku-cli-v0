@@ -56,7 +56,7 @@ func (a *Args) Validate(ctx context.Context) error {
 
 	// Since we're just creating the app directory, we know the path of the app root relative to the current directory
 	a.appName = naam.New(a.AppName)
-	a.appRootPath = filepath.Join(".", a.AppName)
+	a.appRootPath = filepath.Join(".", "project-"+a.AppName)
 
 	// Validate the req + set any default values
 	if len(a.Components) == 0 {
