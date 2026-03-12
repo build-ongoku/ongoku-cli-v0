@@ -1,0 +1,13 @@
+# Goku generated files & directories
+# .goku # This has openapi spec
+# backend/.goku
+# apps/.goku # Where built adminui lives
+# db/.goku # This has database names needed for migrations
+
+# Goku files only for local development
+.dev
+.env.*
+!.env.deploy*
+
+# Apps/frontend build files 
+# **/node_modules # Needed by built adminui

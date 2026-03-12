@@ -1,0 +1,41 @@
+# Generic 
+.DS_Store
+*/.DS_Store
+
+# Secrets
+.secret
+.secret/*
+
+# Envs
+.env*
+!.env.*template
+!.env.vault
+
+# Dev / Debug
+/.dev
+
+# Binaries
+/bin
+
+# START: Comment these out if you want to include generated files in Git
+
+# -Root
+/.goku
+
+# - Sys
+/backend/.goku
+
+# - DB
+/db/.goku
+# -- Dev migration files
+/db/migration/**/*.dev.migration.sql
+
+# - Apps
+/apps/.goku
+/apps/.yarn
+/apps/node_modules
+
+# - Infra
+/infra/.goku
+
+# END: Comment these out if you want to include generated files in Git

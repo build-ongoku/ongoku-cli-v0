@@ -1,0 +1,29 @@
+# Name of the application. This name is used in the generated code.
+app_name: blah
+version: 0.0.1
+description:
+# STOP: Do not change the following settings.
+goku_version_at_create: 0.1.1
+
+# CAUTION: Be careful when changing the following settings.
+# - go_module_name: If you change the module name, you must also change the module name in the go.mod file,
+# - and in the import statements in the Go files.
+go_module_name: blah/backend
+schema_dir: ./goku_schema
+
+# OKAY: Feel free to change the following settings as needed.
+print_debug_files: false
+components:
+  - backend
+  - database
+  - frontend
+  - infra
+mods:
+  - name: user
+    version: v1.0.0
+  - name: auth
+    version: v1.0.0
+  - name: file
+    version: v1.0.0
+  - name: secret
+    version: v1.0.0

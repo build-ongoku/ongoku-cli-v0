@@ -1,0 +1,4 @@
+# yaml-language-server: $schema=https://teejays.github.io/goku/schemausr.schema.json
+app:
+  services:
+    - name: main

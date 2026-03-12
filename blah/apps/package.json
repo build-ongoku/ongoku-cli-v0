@@ -1,0 +1,12 @@
+{
+    "name": "@blah/apps",
+    "private": true,
+    "workspaces": [
+        ".goku/static/admin",
+        ".goku/generated"
+    ],
+    "packageManager": "yarn@4.4.1",
+    "devDependencies": {
+        "process": "^0.11.10"
+    }
+}
